@@ -22,16 +22,19 @@ function App() {
   };
 
   return (
-    <div>
+    <div className='App'>
+      <h1>Create a Team!!!!!</h1>
       <Form addTeamMember={addTeamMember} />
-      <div>
+      <div className='teamCards'>
       {
         team.map(member => {
-          return <div key={member.email}>
-                  <h1>{member.name}</h1>
-                  <h4>{member.email}</h4>
-                  <p>{member.role}</p>
-                </div>  
+          return (
+            <div key={member.email}>
+              <h1>{member.name}</h1>
+              <h4>{member.email}</h4>
+              <p>{member.role}</p>
+            </div> 
+          );
         })
       }
       </div>

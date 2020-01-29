@@ -1,4 +1,5 @@
-import React, {useState} from 'react';
+import React, {useState, useEffect} from 'react';
+import './App.css';
 
 function Form({addTeamMember}) {
     // Setting up state for inputs
@@ -30,7 +31,7 @@ function Form({addTeamMember}) {
     }
     
     return (
-        <form onSubmit={submitForm}>
+        <form className='formInputs' onSubmit={submitForm}>
             <label>Name :{' '}
                 <input 
                     type='text' 
